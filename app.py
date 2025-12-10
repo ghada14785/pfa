@@ -4,6 +4,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import json
 
+
 # Charger les classes
 with open("class_indices.json", "r") as f:
     class_names = json.load(f)
@@ -37,3 +38,4 @@ if uploaded_file is not None:
     if st.button("Predict"):
         result = predict(image)
         st.success(f"🌱 Predicted Disease: **{result}**")
+
